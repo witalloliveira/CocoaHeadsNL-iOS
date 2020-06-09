@@ -34,4 +34,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Archive artifact
       run: xcodebuild clean archive -archivePath $PWD/build/CocoaHeadsNL.xcarchive -scheme CocoaHeadsNL -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4.1' | xcpretty && exit ${PIPESTATUS[0]}
-        
+    - uses: actions/upload-artifact@v2
+      with:
+        name: artefato-ios
+        path: $PWD/build/CocoaHeadsNL.xcarchive
