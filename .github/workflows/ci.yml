@@ -37,5 +37,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: artifact-CocoaHeadsNL.app
-        path: CocoaHeadsNL/CocoaHeadsNL.app
+        path: $PWD/build/CocoaHeadsNL.xcarchive/CocoaHeadsNL.app
 
